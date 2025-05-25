@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-шақырту | Айжан & Нұрлан</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            border-radius: 0 0 20px 20px;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .date-time {
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+        section {
+            background: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #d23369;
+            border-bottom: 2px dashed #ffb6c1;
+            padding-bottom: 10px;
+        }
+        .address {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #d23369;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #a82b56;
+            transform: translateY(-3px);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .submit-btn {
+            background: #d23369;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background: #f8f8f8;
+            border-radius: 20px 20px 0 0;
+        }
+        .hashtags {
+            color: #d23369;
+            font-style: italic;
+        }
+        /* Календарь */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .calendar-day {
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .highlight {
+            background: #d23369;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Айжан & Нұрлан</h1>
+            <div class="date-time">1 Қазан 2024 | 17:00</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Пригласительный текст -->
+        <section>
+            <h2>Құрметті қонақтар!</h2>
+            <p>СІЗДІ БІЗДІҢ ҮЗАТУ ТОЙЫМЫЗҒА ШАҚЫРАМЫЗ!</p>
+            <p>Біздің бақытты күнімізге ортақтасуға келіңіздер.</p>
+        </section>
+
+        <!-- Дата и время -->
+        <section>
+            <h2>Той күні және уақыты</h2>
+            <p><strong>1 Қазан 2024 жыл</strong></p>
+            <p>Сағат <strong>17:00</strong> басталады</p>
+            
+            <div class="calendar">
+                <div>ДС</div>
+                <div>СС</div>
+                <div>СР</div>
+                <div>БС</div>
+                <div>ЖМ</div>
+                <div>СБ</div>
+                <div>ЖС</div>
+                
+                <!-- Пустые дни -->
+                <div></div><div></div><div></div><div></div><div></div>
+<!-- Дни месяца -->
+                <div>1</div>
+                <div class="highlight">2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <!-- ... остальные дни ... -->
+            </div>
+        </section>
+
+        <!-- Адрес -->
+        <section>
+            <h2>Мекен-жайы</h2>
+            <p class="address">ЖНАМ SHAHAR™ МЕЙРАМХАНАСЫ, ШЫРЫС 2 МКр, АКТау</p>
+            <a href="https://yandex.kz/maps" class="btn">Яндекс Картада көру</a>
+        </section>
+
+        <!-- Анкета -->
+        <section>
+            <h2>Анкета</h2>
+            <p>Тойға қатысатыныңызды білсек, қуаныштымыз!</p>
+            
+            <div class="form-group">
+                <input type="text" placeholder="Аты-жөніңіз">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" placeholder="Жұбайыңыздың аты (егер бар болса)">
+            </div>
+            
+            <div class="form-group">
+                <select>
+                    <option>Иә, қуанышпен келемін</option>
+                    <option>Өкінішке орай, келе алмаймын</option>
+                </select>
+            </div>
+            
+            <button class="submit-btn">Жіберу</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>Бізбен бөлісіңіз: <span class="hashtags">#АйжанНұрлан #той2024 #сайтшақырту</span></p>
+    </footer>
+
+    <!-- Можно добавить JavaScript для таймера -->
+    <script>
+        // Пример: Таймер до события
+        function updateTimer() {
+            const eventDate = new Date("2024-10-01T17:00:00");
+            const now = new Date();
+            const diff = eventDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+            console.log(`До той осталось: ${days} дней ${hours} часов`);
+            // Можно вывести на страницу
+        }
+        
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
